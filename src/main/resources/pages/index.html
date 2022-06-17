@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SPRING BOOT</title>
+</head>
+<body>
+	<h1>Welcome to ramana's world</h1>
+	<h4>This is index page</h4>
+	<hr>
+	<form th:action="@{/addUser}" th:object="${user}" method="POST">
+		<p>
+			User ID   :<input type="number" name="user_id" />
+		</p>
+		<p>
+			User Name :<input type="text" name="username" />
+		</p>
+		<p>
+			Email_ID  :<input type="text" name="email" />
+		</p>
+		<p>
+			Department:<input type="text" name="dept" />
+		</p>
+		<p>
+			User Zone :<input type="text" name="user_zone" />
+		</p>
+		<p>
+			<input type="submit" value="Add User" />
+		</p>
+	</form>
+</body>
+</html>
